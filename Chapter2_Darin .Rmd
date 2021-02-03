@@ -1,0 +1,100 @@
+---
+title: "Chapter 2"
+author: "Emily Darin"
+date: "2/3/2021"
+output: html_document
+---
+```{r}
+
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+Chapter 2 Visualization Notes 
+
+Number 1 lesson I learned: Be patient with R and Yourself 
+
+Making tables and a scatterplot ( )
+
+
+Load Packages * make sure you download socviz first
+```{r}
+library(socviz)
+library(tidyverse)
+```
+
+Create a data frame
+
+```{r}
+my_numbers<-c(1,2,3,4)
+your_numbers<-c(5,6,7,8)
+
+```
+```{r}
+
+```
+
+Basic statistics with the data frame 
+
+```{r}
+mean(my_numbers)
+```
+
+Summary of the data frame 
+
+```{r}
+my_summary <- summary(my_numbers)
+my_summary
+```
+
+Note: I have been having trouble with means on boxplots, this would be a great alternative to plug in for stat_summary. 
+
+Making a Table
+
+ 
+
+```{r}
+table(my_numbers)
+sd(my_numbers)
+
+```
+
+Making a figure 
+
+```{r}
+library(gapminder)
+gapminder
+```
+
+What is the purpose of mapping?
+
+
+```{r}
+example<-ggplot(data=gapminder, mapping= aes(x=gdpPercap, y= lifeExp) )+ geom_point()
+
+example
+```
+
